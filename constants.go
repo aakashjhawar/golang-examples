@@ -10,8 +10,8 @@ const a string = "global string"
 func main() {
 	fmt.Println(a)
 
-	const b = 5037193
-	const c = 4e17 / b
+	const b = 500000000
+	const c = 3e20 / b
 	fmt.Println(b, c)
 
 	fmt.Println(int64(c))
