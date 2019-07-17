@@ -40,7 +40,7 @@ func main() {
 		case int:
 			fmt.Println("I'm int")
 		default:
-			fmt.Println("Forgot the type %T \n", t)
+			fmt.Printf("Forgot the type %T \n", t)
 		}
 	}
 
