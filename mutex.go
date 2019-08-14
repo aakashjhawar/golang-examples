@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"sync"
 	"sync/atomic"
@@ -57,18 +56,6 @@ func main() {
 	}
 	// Let the 10 goroutines work on the state and mutex for a second.
 
-	time.Sleep(time.Second)
-	// Take and report final operation counts.
-
-	readOpsFinal := atomic.LoadUint64(&readOps)
-	fmt.Println("readOps:", readOpsFinal)
-	writeOpsFinal := atomic.LoadUint64(&writeOps)
-	fmt.Println("writeOps:", writeOpsFinal)
-	// With a final lock of state, show how it ended up.
-
-	mutex.Lock()
-	fmt.Println("state:", state)
-	mutex.Unlock()
 }
 
 // Running the program shows that we executed about 90,000 total operations against our mutex-synchronized state.
